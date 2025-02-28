@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("./partials/head") %>
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include("./partials/script") %> <%- include("./partials/navbar") %>
+    <div class="container">
+      <form action="/blog" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="name" class="form-label">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            name="title"
+            id="name"
+            aria-describedby="name"
+          />
+        </div>
+        <div class="form-floating">
+          <textarea
+            class="form-control"
+            name="body"
+            placeholder="Content of Blog"
+            id="floatingTextarea2"
+            style="height: 100px"
+          ></textarea>
+          <label for="body">Body</label>
+        </div>
+        <div class="input-group mb-3 mt-4">
+          <input
+            type="file"
+            name="coverImg"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
